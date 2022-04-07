@@ -8,7 +8,7 @@ var canvas;
 var palyer, playerBase, playerArcher;
 var playerArrows = [];
 var board1, board2;
-var numberOfArrows = 10;
+var numberOfArrows = 15;
 
 var score = 0;
 
@@ -61,7 +61,7 @@ function draw() {
         playerArrows[i].body
       );
 
-      if (board1Collision.collided && board2Collision.collided) {
+      if (board1Collision.collided || board2Collision.collided) {
         score += 5;
       }
 
